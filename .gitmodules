@@ -1,0 +1,3 @@
+[submodule "SonicAvenue"]
+	path = SonicAvenue
+	url = git@github.com:Nafhed/SonicAvenue.git

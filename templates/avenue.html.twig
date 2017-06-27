@@ -1,0 +1,17 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+{#     {% include 'modular/login.html.twig' with {'page': page.find('/avenue', true)} %}
+    {% include 'modular/events.html.twig' with {'page': page.find('/avenue', true)} %} #}
+
+    {{ parent() }}
+
+    <div class="content-wrapper">
+        {{ page.content }}
+
+        <div class="snipcart-categories">
+        {% for child in page.collection() %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

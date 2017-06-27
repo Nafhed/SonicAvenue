@@ -1,0 +1,10 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+	{{ page.content }}
+
+	{# {% include 'modular/lightslider.html.twig' with {'page': page.find('/slider', true)} %} #}
+	{# {% include 'modular/avenue.html.twig' with {'page': page.find('/avenue', true)} %} #}
+
+	{{ parent() }}
+{% endblock %}

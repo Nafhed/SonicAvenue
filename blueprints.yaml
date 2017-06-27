@@ -1,0 +1,26 @@
+name: Sonic Avenue
+version: 0.1
+description: "React, Bulma interactive theme"
+icon: empire
+author:
+  name: Nathan Brettell
+  email: nathanbrettell@gmail.com
+  url: http://nathanbrettell.com
+homepage: https://github.com/Nafhed/sonic-avenue
+keywords: avenue, theme, core, modern, fast, responsive, html5, css3
+bugs: https://github.com/Nafhed/sonic-avenue/issues
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 1
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
