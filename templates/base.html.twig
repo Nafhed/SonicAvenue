@@ -22,12 +22,12 @@
 
 {% endblock head %}
 </head>
-<body class="{{ page.header.body_classes }}">
-    <div id="wrapper uk-container">
+<body class="{{ page.header.body_classes }}" style="background-image: {{ page.find('/images').media['avenue-background-image.jpg'] }};">
+    <div id="wrapper" class="uk-container">
         {% block header %}
         <header id="header">
             <div id="logo">
-                <h3><a href="{{ base_url == '' ? '/' : base_url }}">{{ config.site.title }}</a></h3>
+                <h1 class="uk-heading-primary"><a href="{{ base_url == '' ? '/' : base_url }}">{{ config.site.title }}</a></h1>
             </div>
             <div id="navbar">
                 {% block header_extra %}{% endblock %}
@@ -44,6 +44,7 @@
         {% block body %}
         <section id="body" class="{{ class }}">
             {% block content %}{% endblock %}
+            {% include "forms/form.html.twig" with { form: forms('newsletter-form') } %}
         </section>
         {% endblock %}
 
